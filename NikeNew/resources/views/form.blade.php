@@ -20,7 +20,7 @@
 <body>
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <img src="https://www.mtall.com.br/wp-content/uploads/2015/04/nike-logo.png" alt="Logo" width="60" height="24" class="d-inline-block align-text-top">
                 <em><strong>NIKE</strong></em>
             </a>
@@ -31,7 +31,7 @@
         <div class="row justify-content-md-center">
             <div class="col-md-auto">
                 <br>
-                <h1> Formulário Nike</h1>
+                <h1> Formulário <em>NIKE</em></h1>
                 <h3><small class="text-body-secondary">Coloque suas informações</small></h3>
             </div>
         </div>
@@ -41,33 +41,33 @@
                 <form method="POST" action="/adicionarCliente">
                     @csrf
                     <label for="nameinput" class="form-label">Nome</label>
-                    <input type="text" class="form-control" name='Nome' placeholder="Alex" required>
+                    <input type="text" class="form-control" name='Nome' value="Alex" required>
 
                     <br>
 
                     <label for="adressinput" class="form-label">Endereço</label>
-                    <input type="text" class="form-control" name="Endereco" placeholder="BellWood" required>
+                    <input type="text" class="form-control" name="Endereco" value="BellWood" required>
 
                     <br>
 
                     <label for="bairroiput" class="form-label">Bairro</label>
-                    <input type="text" class="form-control" name="Bairro" placeholder="Raça Absoluta" required>
+                    <input type="text" class="form-control" name="Bairro" value="JD Bartira" required>
 
                     <br>
 
                     <label for="cepinput" class="form-label">CEP</label>
-                    <input type="text" class="form-control" name="CEP" placeholder="AlienX" required>
+                    <input type="text" class="form-control" name="CEP" value="12345-654" required>
 
                     <br>
 
                     <label for="cidadeiput" class="form-label">Cidade</label>
-                    <input type="text" class="form-control" name="Cidade" placeholder="10Aliens" required>
+                    <input type="text" class="form-control" name="Cidade" value="Nova Iorque" required>
 
 
                     <br>
 
                     <label for="estadoiput" class="form-label">Estado</label>
-                    <input type="text" class="form-control" name="Estado" placeholder="Nova Iorque" required>
+                    <input type="text" class="form-control" name="Estado" value="Nova Iorque" required>
             </div>
         </div>
 

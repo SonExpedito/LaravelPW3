@@ -20,7 +20,7 @@
 <body>
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <img src="https://www.mtall.com.br/wp-content/uploads/2015/04/nike-logo.png" alt="Logo" width="60" height="24" class="d-inline-block align-text-top">
                 <em><strong>NIKE</strong></em>
             </a>
@@ -54,15 +54,26 @@
                             <th>Ação</th>
                         </thead>
                         <tbody>
+                            @if (count($cliente) > 0)
+                            @csrf
+                            @foreach ($cliente as $clie)
                             <tr class="table-active">
-
-                            </tr>
+                                <th>{{ $clie->Nome }}</th>
+                                <th>{{ $clie->Endereco }}</th>
+                                <th>{{ $clie->Bairro }}</th>
+                                <th>{{ $clie->CEP }}</th>
+                                <th>{{ $clie->Cidade }}</th>
+                                <th>{{ $clie->Estado }}</th>
+                                <th><a href="/editar/{{ $clie->id }}" class="btn btn-primary">Editar</a>
+                                    <a href="/excluir/{{ $clie->id }}" class="btn btn-danger">Excluir</a>
+                                </th>
+                                < </tr>
+                                    @endforeach
+                                    @else
                             <tr>
-
+                                <th>Sem registros!</th>
                             </tr>
-                            <tr>
-
-                            </tr>
+                            @endif
                         </tbody>
                     </table>
                 </div>
